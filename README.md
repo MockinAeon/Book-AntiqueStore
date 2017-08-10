@@ -5,4 +5,4 @@ Password: admin<br>
 
 [Website Prototype](https://goo.gl/DKEdNj)
 
-<iframe src= "https://goo.gl/DKEdNj"></iframe>
+<iframe height=498 width=510 src="https://goo.gl/DKEdNj" frameborder=0 allowfullscreen></iframe>
