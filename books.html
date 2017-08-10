@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Books</title>
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="CSS/books.css">
+	<link rel="stylesheet" href="CSS/allpages.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+		<div class="site-map">
+				<a href="index.html">Home</a> <span>></span> <span>Books</span>
+			</div>
+			<div class="row top-bar">
+				<div class="col-lg-6 col-md-6 col-xs-6">
+					<div id="logoimg">
+						<img src="IMG/logoimg.png" alt="logoimg" />
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-xs-6">
+					<div class="row icon-part">
+						<div id="login-part">
+							<form action="">
+								<input class="form-control" type="text" id="username" placeholder="Username">
+								<input class="form-control" type="password" id="password" placeholder="Password">
+								<button id="login-btn" type="" class="btn btn-default">Login</button>
+								<div class="create-link" class="btn btn-md foot-btn" data-toggle="modal" data-target="#create">Do not have account? Create your account now!</div>
+								<div class="errormsg">Wrong Password or the Username doesn't exsit.</div>
+							</form>
+						</div>
+						<div id="logout-part">
+							<form action="">
+								<a href="account.html">Check My Account</a>
+								<button id="logout-btn" type="" class="btn btn-default">Logout</button>
+							</form>
+						</div>
+
+
+						<div class="col-lg-3 col-md-3 col-xs-3 col-sm-offset-3 col-xs-offset-1">
+							<div class="icon-part-icon">
+								<a id="login"><i class="fa fa-user fa-2x"></i><p></p></a>
+							</div>
+
+						</div>
+						<div class="col-lg-3 col-md-3  col-xs-3">
+							<div class="icon-part-icon">
+								<a href="shopping-cart.html"><i class="fa fa-shopping-cart fa-2x"></i><p>Cart</p></a>
+								<div class="cart-quantity">0</div>
+							</div>
+
+						</div>
+						<div class="col-lg-3 col-md-3  col-xs-3">
+							<div class="icon-part-icon">
+								<a href="location.html">
+									<i class="fa fa-map-marker fa-2x"></i>
+									<p>Location</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row search-part">
+						<div class="col-lg-6 col-md-6 col-md-offset-2  col-sm-8 col-sm-offset-1  col-xs-11 " >
+							<form class="navbar-form navbar-left" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" id="search" placeholder="Search by Title, ISBN, Author, etc.">
+								<span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+							</div>
+							<!-- /input-group -->
+						</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="container-fluid">
+			<div class="row">
+				<nav id="nav-bar" class="navbar navbar-default">
+					<div class="container-fluid">
+
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li id="active" class="active"><a href="books.html">Books</a></li>
+								<li><a href="antiques.html">Antiques</a></li>
+								<li><a href="events.html">Events</a></li>
+								<li><a href="contact-us.html">Contact Us</a></li>
+							</ul>
+						</div>
+						<div id="mouseout"></div>
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row sort-part">
+				<h3>Books</h3>
+				<div class="sort">
+					<form action="">
+						<select name="sort" id="sort" class="form-control">
+							<option value="relevence">
+								Relevence
+							</option>
+							<option value="featured">
+								Featured
+							</option>
+							<option value="price-low">
+								Price: Low to High
+							</option>
+							<option value="price-high">
+								Price: High to Low
+							</option>
+							<option value="date">
+								Release Date
+							</option>
+						</select>
+					</form>
+					<span>SORT BY:</span>
+				</div>
+			</div>
+			<!--end sort-part-->
+		<div class="row scroll-part">
+			<a href="contact-us.html"><marquee behavior="alternate" direction="left" scrollamount="10">You can also sell your old books to our business. Contact us for more information. </marquee></a>
+		</div>
+			<div class="row show-books">
+
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal1">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal2">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal3">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal4">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal5">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal6">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal7">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12 col-md-3" class="btn btn-primary ctrl-btn" data-toggle="modal" data-target="#exampleModal8">
+
+					<div class="row show-books-img">
+						<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+					</div>
+					<div class="row books-title">
+						<span>A Russian Song Book</span>
+					</div>
+					<div class="row books-writer">
+						<span>Rose N.Rubin and Micheal Stillman</span>
+					</div>
+					<div class="row books-price">
+						<span>$12.74</span>
+					</div>
+				</div>
+			</div>
+			<!--end show-books-->
+			<div id="exampleModal1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1" id="quantity">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add" >
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal2" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal3" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal4" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal5" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal6" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal7" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="exampleModal8" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content popup-part">
+						<div class="col-lg-5 col-md-5">
+							<div class="popup-img">
+								<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+							</div>
+							<div class="popup-smimg-part">
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg ">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+								<div class="popup-smimg">
+									<img src="IMG/books/russian_song_book.jpg" alt="russian_song_book">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7">
+							<div class="popup-title">
+								<span>A Russian Song Book (Dover Song Collections)</span>
+							</div>
+							<div class="popup-info">
+								<div class="col-lg-6 col-md-6">
+									<span class="popup-isbn">ISBN 0486261182</span>
+									<span class="popup-price">Price: $12.74</span>
+									<span class="popup-rate">
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-1"></i>
+										<i class="fa fa-star star-2"></i>
+										<i class="fa fa-star star-2"></i>
+									</span>
+
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="popup-quantity">
+										<input type="number" min="1" value="1">
+										<span>Quantity</span>
+									</div>
+									<div class="popup-add">
+										<div class="addbtn">
+											<span>ADD TO CART</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-description">
+								<div class="description-btn">
+									<div class="descriptionbtn description-btn-active">Details</div>
+									<div class="descriptionbtn">Reviews</div>
+								</div>
+								<div class="description-review">
+										<span class="review-title">Product Description</span>
+										<div class="review-body">
+											<ul>
+												<li><span class="detail-text1">Review 1: </span><span class="detail-text2">qqqqqqqqqq </span></li>
+												<li><span class="detail-text1">Review 2: </span><span class="detail-text2">wwwwwwwwww</span></li>
+												<li><span class="detail-text1">Review 3: </span><span class="detail-text2">eeeeeeeeee</span></li>
+												<li><span class="detail-text1">Review 4: </span><span class="detail-text2">rrrrrrrrrr</span></li>
+												<li><span class="detail-text1">Review 5: </span><span class="detail-text2">tttttttttt</span></li>
+											</ul>
+
+										</div>
+									</div>
+								<div class="description-detail">
+									<span class="detail-title">Product Details</span>
+									<div class="detail-body">
+										<ul>
+											<li><span class="detail-text1">Series: </span><span class="detail-text2">Dover Song Collections</span></li>
+											<li><span class="detail-text1">Paperback: </span><span class="detail-text2">112 pages</span></li>
+											<li><span class="detail-text1">Publisher: </span><span class="detail-text2">Dover Publications (October 1, 1989)</span></li>
+											<li><span class="detail-text1">Language: </span><span class="detail-text2">English</span></li>
+											<li><span class="detail-text1">ISBN-10: </span><span class="detail-text2">0486261182</span></li>
+											<li><span class="detail-text1">ISBN-13: </span><span class="detail-text2"> 978-0486261188</span></li>
+											<li><span class="detail-text1">Product Dimensions: </span><span class="detail-text2">9 x 0.3 x 11.9 inches</span></li>
+											<li><span class="detail-text1">Shipping Weight: </span><span class="detail-text2">9.9 ounces</span></li>
+
+
+										</ul>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+		</div>
+		<!--end container-->
+		<div class="row foot-part">
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<button type="button" class="btn btn-md foot-btn" data-toggle="modal" data-target="#sellbook">Sell Book to Us</button>
+			</div>
+<!--
+			<div class="col-lg-3 col-md-3">
+				<button type="button" class="btn btn-md foot-btn" data-toggle="modal" data-target="#subscribe">Subscribe to Us</button>
+			</div>
+-->
+
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<button type="button" class="btn btn-md foot-btn" data-toggle="modal" data-target="#rate">Rate Us</button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-4">
+				<a href="https://www.facebook.com/Books-Arts-734371633314488/?fref=ts">
+					<button type="button" class="btn btn-md foot-btn" data-toggle="modal">Follow Us <i class="fa fa-facebook-square fa-1x"></i></button>
+				</a>
+			</div>
+			<!--sell book-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="sellbook">
+				<div class="modal-dialog">
+					<div class="modal-content subscribe">
+
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title">"Let Us Buy Back Your Books"</h3>
+
+						</div>
+						<div class="modal-body">
+							<p>See a representative in stores or contact us and we can provide you with an estimated cost we would offer to buy your book. </p>
+
+						</div>
+						<div class="modal-footer sellbook-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal" data-toggle="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--end sell book-->
+
+			<!--subscribe-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="subscribe">
+				<div class="modal-dialog">
+					<div class="modal-content subscribe">
+
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title">Subscribe to Us</h3>
+
+						</div>
+						<div class="modal-body">
+							<p>Enter your email address to receive newsletters from Boston Books and Arts.</p>
+							<form action="">
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-8">
+										<input type="email" class="form-control" id="email" placeholder="Email Address" required>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer success-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal" data-toggle="modal" data-target="#subscribe-success">SUBSCRIBE</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<div class="modal fade" tabindex="-1" role="dialog" id="subscribe-success">
+				<div class="modal-dialog">
+					<div class="modal-content action-success">
+
+
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+						<div class="modal-body">
+							<p>YOU ARE SUBSCRIBED!</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--end subscribe-->
+
+			<!--rate-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="rate">
+				<div class="modal-dialog">
+					<div class="modal-content rate">
+
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title">Rate Us</h3>
+						</div>
+						<div class="modal-body">
+							<p>Quickly provide us with your feedback. We love to make your experience better each time.</p>
+							<form action="">
+								<div class="form-group">
+									<table class="table table-bordered">
+										<thead>
+											<td></td>
+											<td>Agree</td>
+											<td>Somewhat Agree</td>
+											<td>Neutral</td>
+											<td>Disagree</td>
+											<td>Somewhat Disagree</td>
+											<td>N/A</td>
+										</thead>
+										<tr class="white">
+											<td>Friendly customer service</td>
+											<td>
+												<input type="radio" name="1" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="1" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="1" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="1" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="1" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="1" value="na">
+											</td>
+										</tr>
+										<tr class="info">
+											<td>Pleased with the products</td>
+											<td>
+												<input type="radio" name="2" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="2" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="2" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="2" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="2" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="2" value="na">
+											</td>
+										</tr>
+										<tr class="white">
+											<td>User-friendly site</td>
+											<td>
+												<input type="radio" name="3" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="3" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="3" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="3" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="3" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="3" value="na">
+											</td>
+										</tr>
+										<tr class="info">
+											<td>Online ordering was somoothe and understandable</td>
+											<td>
+												<input type="radio" name="4" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="4" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="4" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="4" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="4" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="4" value="na">
+											</td>
+										</tr>
+										<tr class="white">
+											<td>Intriguing and interesting event</td>
+											<td>
+												<input type="radio" name="5" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="5" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="5" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="5" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="5" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="5" value="na">
+											</td>
+										</tr>
+										<tr class="info">
+											<td>Educated featured guest</td>
+											<td>
+												<input type="radio" name="6" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="6" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="6" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="6" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="6" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="6" value="na">
+											</td>
+										</tr>
+										<tr class="white">
+											<td>Would recommend a friend to visit</td>
+											<td>
+												<input type="radio" name="7" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="7" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="7" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="7" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="7" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="7" value="na">
+											</td>
+										</tr>
+										<tr class="info">
+											<td>Wounld recommend a friend to an event here</td>
+											<td>
+												<input type="radio" name="8" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="8" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="8" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="8" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="8" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="8" value="na">
+											</td>
+										</tr>
+										<tr class="white">
+											<td>Would recommend a friend to order via site</td>
+											<td>
+												<input type="radio" name="9" value="agree">
+											</td>
+											<td>
+												<input type="radio" name="9" value="sagree">
+											</td>
+											<td>
+												<input type="radio" name="9" value="Neutral">
+											</td>
+											<td>
+												<input type="radio" name="9" value="Disagree">
+											</td>
+											<td>
+												<input type="radio" name="9" value="sDisagree">
+											</td>
+											<td>
+												<input type="radio" name="9" value="na">
+											</td>
+										</tr>
+										<tr>
+											<td>Other/Comments</td>
+											<td colspan="6">
+												<input id="other" type="text">
+											</td>
+										</tr>
+									</table>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer rate-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal" data-toggle="modal" data-target="#rate-success">RATE</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<div class="modal fade" tabindex="-1" role="dialog" id="rate-success">
+				<div class="modal-dialog">
+					<div class="modal-content action-success">
+
+
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+						<div class="modal-body">
+							<p>THANKS FOR RATING!</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--end subscribe-->
+			<!--end rate-->
+						<!--create-->
+			<div class="modal fade" tabindex="-1" role="dialog" id="create">
+				<div class="modal-dialog">
+					<div class="modal-content rate">
+
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title">Create Your Account</h3>
+						</div>
+						<div class="modal-body">
+
+							<form action="">
+								<div class="form-group">
+									<div class="form-group">
+										<label >Username</label>
+										<input type="text" class="form-control account-txt" name="fullname" required>
+									</div>
+									<div class="exist">Username already exist.</div>
+									<div class="form-group">
+										<label >Create the password</label>
+										<input type="password" class="form-control account-txt" name="password" required>
+									</div>
+									<div class="form-group">
+										<label>Confirm your password </label>
+										<input type="password" class="form-control account-txt" name="password2" required>
+									</div>
+									<div class="notmatch">Two passwords does not match.</div>
+<!--
+									<div class="form-group">
+										<label >Your email address </label>
+										<input type="email"  class="form-control account-txt" required>
+									</div>
+-->
+
+
+								</div>
+							</form>
+						</div>
+						<div  class="modal-footer create-footer">
+							<button id="create-btn" disabled type="button" class="btn btn-md btn-green">Create</button>
+							<button id="createbutton" type="button" class="btn btn-md btn-green" data-dismiss="modal" data-toggle="modal" data-target="#create-success">Create</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<div class="modal fade" tabindex="-1" role="dialog" id="create-success">
+				<div class="modal-dialog">
+					<div class="modal-content action-success">
+
+
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+						<div class="modal-body">
+							<p>Create Account Succefully!</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-md btn-green" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+
+
+			<!--end create->
+
+		</div>
+		<!--			end foot-part-->
+	</div>
+	<!--end wrapper-->
+	<script src="JS/allpage.js"></script>
+	<script src="JS/add.js"></script>
+</body>
+
+</html>

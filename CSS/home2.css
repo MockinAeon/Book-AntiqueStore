@@ -1,0 +1,137 @@
+.wrapper{
+	background-color: #e8f5e9;
+	margin: auto;
+}
+.top-bar{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#logoimg{
+	text-align: center;
+	width: 50%;
+}
+#logoimg img{
+	width: 50%;
+}
+.icon-part{
+	margin-top: 15px;
+}
+.search-part{
+	margin-top: 15px;
+}
+#search{
+	width: 340px;
+}
+#nav-bar{
+	border: none;
+	border-radius: 0px;
+	background-color: #4caf50;
+}
+#nav-bar #active a{
+	background-color: #2e7d32;
+	color: white;
+}
+#nav-bar a{
+	color: black;
+}
+.bigimg{
+	
+	height: auto;
+}
+/*
+.home-info{
+	margin-left: 8px;
+	margin-right: -15px;
+	text-align: center;
+	color: white;
+	background-color: #4caf50;
+	padding: 58px 0;
+	height: atuo;
+
+}
+*/
+
+.visit-info{
+	float: left;
+	position: absolute;
+	left: 140px;
+	top: -120px;
+	background-color: lightgray;
+	opacity: 0.94;
+	width: 60%;
+	padding-bottom: 10px;
+}
+.textgroup{
+	width: 100%;
+	float: left;
+	color: black;
+}
+/*
+.home-info span{
+	background-color: black;
+	margin-left: 10%;
+	margin-right: 10%;
+	float: left;
+	width: 100%;
+	
+}
+*/
+
+.visit-info span{
+	margin-bottom:5px;
+	float: left;
+	width: 100%;
+}
+
+.carousel-inner .item img{
+	width: 100%;
+	height: 500px;
+}
+
+.welcome-part{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.welcome-left{
+	padding: 0 50px;
+	height: 330px;
+}
+.welcome-right{
+	border-left: gray solid 1px;
+	padding: 20px;
+	text-align: center;
+	height: 330px;
+}
+.welcome-right-1{
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 10px;
+	text-align: center;
+	width: 80%;
+}
+.welcome-right-1 h2{
+	color: #2e7d32;
+	font-style: italic;
+}
+.welcome-right-2{
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 10px;
+	text-align: center;
+	width: 70%;
+}
+.welcome-right-2 h3{
+	color: #2e7d32;
+	font-style: italic;
+}
+.foot-part{
+	background-color: #4caf50;
+	padding: 10px 0;
+	height: ;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.foot-part a{
+	color: white;
+}

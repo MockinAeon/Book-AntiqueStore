@@ -1,0 +1,114 @@
+
+.visit-info{
+	width: 100%;
+	padding-bottom: 10px;
+	text-align: center;
+	padding: 20px 0;
+}
+.textgroup{
+	width: 100%;
+	color: black;
+}
+.textgroup h3{
+	color: #2e7d32;
+	margin-bottom: 50px;
+}
+/*
+.home-info span{
+	background-color: black;
+	margin-left: 10%;
+	margin-right: 10%;
+	float: left;
+	width: 100%;
+	
+}
+*/
+
+.visit-info span{
+	font-size: 17px;
+	margin-bottom:15px;
+	float: left;
+	width: 100%;
+}
+
+.carousel-inner .item img{
+	width: 100%;
+	height: 500px;
+}
+
+.text-part{
+	margin-top: 30px;
+	padding: 20px 40px 20px 0;
+}
+.text-right{
+	text-align: left;
+	height: auto;
+	
+}
+.text-right h2{
+	color: #2e7d32;
+}
+.text-right p{
+	height: auto;
+	font-size: 15px;
+}
+.text-left{
+	border-left: gray solid 1px;
+	padding: 30px 0 30px 30px ;
+	text-align: center;
+	height: auto;
+}
+.text-left-1{
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+.text-left-1 p{
+	color: #2e7d32;
+	font-style: italic;
+	font-size: 18px;
+}
+
+.foot-part{
+	background-color: #4caf50;
+	padding: 10px 0;
+	height: ;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.foot-part a{
+	color: white;
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+	.carousel-inner .item img{
+	width: 100%;
+	height: 400px;
+}
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	.carousel-inner .item img{
+	width: 100%;
+	height: 330px;
+}
+	.text-left{
+	border-left:none;
+	padding: 30px 0 30px 30px ;
+	text-align: center;
+	height: auto;
+}
+}
+
+@media screen and (max-width: 768px) {
+	.carousel-inner .item img{
+	width: 100%;
+	height: 260px;
+}
+	.text-left{
+	border-left:none;
+	padding: 30px 0 30px 30px ;
+	text-align: center;
+	height: auto;
+}
+}

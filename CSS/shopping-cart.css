@@ -1,0 +1,158 @@
+.shopping-cart {
+	margin: 20px 0;
+}
+
+.shopping-cart-title h2 {
+	color: #2e7d32;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.checkout-part {
+	float: right;
+	border: 1px solid #2e7d32;
+	padding: 20px;
+	background-color: white;
+}
+
+.checkout-text-1 {
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.checkout-text-2 {
+	color: darkred;
+	font-size: 18px;
+	font-weight: 900;
+}
+
+#checkout {
+	color: black;
+	font-weight: 500;
+	width: 100%;
+	margin-top: 20px;
+	background-color: #f4eb49;
+	box-shadow: 3px 3px 5px #888888;
+}
+.empty-info{
+	margin-top: 50px;
+}
+.shopping-cart-body {
+	margin-top: 50px;
+}
+
+.shopping-cart-img img {
+	width: 100%;
+}
+
+.gray-text {
+	font-size: 15px;
+	color: gray;
+	margin-top: 10px;
+}
+
+.shopping-cart-good {
+	border: 1px solid #2e7d32;
+	padding: 20px;
+	background-color: white;
+}
+
+.good-title {
+	color: #2e7d32;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+.good-status {
+	font-size: 15px;
+	color: #4caf50;
+	margin-top: 10px;
+}
+
+.delete {
+	margin-top: 10px;
+}
+
+.delete a {
+	font-size: 15px;
+	color: #2e7d32;
+}
+
+.quantity input {
+	width: 50%;
+	margin-left: 10%;
+}
+
+.subtotal {
+	float: right;
+	margin-top: 20px;
+}
+
+#checkout-part .modal-body {
+	text-align: left;
+	font-size: 12px;
+}
+
+#checkout-part .modal-body input {
+	text-align: left;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#checkout-part .modal-body select {
+	font-size: 12px;
+	font-style: italic;
+}
+
+#checkout-part .modal-body p {
+	font-size: 10px;
+	color: gray;
+}
+
+.checkout-footer {
+	text-align: center;
+	margin-top: 430px;
+}
+
+#placeorder-btn {
+	background-color: #f4eb49;
+	color: black;
+	font-weight: 500;
+	box-shadow: 3px 3px 5px #888888;
+}
+
+.checkout-confirm {
+	border: 1px lightgray solid;
+	padding: 0 10px 10px 10px;
+	float: left;
+	font-weight: 900;
+}
+
+.confirm-left {
+	width: 80%;
+	float: left;
+	margin-top: 9px;
+}
+
+.confirm-right {
+	float: right;
+	width: 20%;
+	margin-top: 9px;
+}
+
+#order-success {
+	margin-top: 200px;
+}
+@media screen and (max-width: 768px) {
+	.checkout-footer {
+	text-align: center;
+	margin-top: 100px;
+}
+	.checkout-confirm {
+	border: 1px lightgray solid;
+	padding: 0 10px 10px 10px;
+	float: left;
+	font-weight: 900;
+		width: 100%;
+}
+}

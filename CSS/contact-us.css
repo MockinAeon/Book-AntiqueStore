@@ -1,0 +1,58 @@
+
+.contact-info{
+	margin: 20px 0;
+	
+}
+.contact-info-title h3{
+	color:  #2e7d32;
+	margin-bottom: 20px;
+}
+.contact-info-body span{
+	font-size: 18px;
+}
+#contact-us label{
+	text-align: left;
+}
+#contact-us .form-group{
+	margin-top: 20px;
+}
+.store-info{
+	padding: 40px 20%;
+	text-align: center;
+}
+.store-info span{
+	float: left;
+	
+}
+.store-info-title span{
+	width: 100%;
+	font-size: 20px;
+	font-weight: 800;
+	margin:10px 0;
+}
+.store-info-body span{
+	width: 100%;
+}
+#success{
+	margin-top: 200px;
+}
+.success{
+	text-align: center;
+	padding: 20px 20px 10px 20px;
+	background-color: #e8f5e9;
+}
+.success p{
+	color: #2e7d32;
+	font-size: 20px;
+	font-weight: 900
+}
+.modal-footer{
+	text-align: center;
+}
+.btn-green{
+	background-color: #2e7d32;
+	color: white;
+}
+.btn-green a{
+	color: white;
+}

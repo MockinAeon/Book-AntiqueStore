@@ -1,0 +1,72 @@
+iframe{
+	width: 100%;
+	height: 500px;
+	border: 0px;
+}
+
+.text-part{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.visit-info{
+	float: left;
+	width: 100%;
+	padding: 10px 0 20px 0;
+	text-align: center;
+	height: auto;
+}
+.textgroup{
+	width: 100%;
+	color: black;
+}
+.textgroup h3{
+	color: #2e7d32;
+	margin-bottom: 20px;
+}
+
+
+.visit-info span{
+	font-size: 15px;
+	margin-bottom:10px;
+	float: left;
+	width: 100%;
+}
+.location{
+	text-align: center;
+}
+.location h3{
+	color: #2e7d32;
+}
+
+.location-body{
+	margin-top: 20px;
+}
+.location-body span{
+	float: left;
+	width: 100%;
+	font-size: 15px;
+	margin-top: 10px;
+}
+.location-body a{
+	float: left;
+	width: 100%;
+	color: #2e7d32;
+	font-size: 15px;
+	margin-top: 10px;
+}
+.location-body a{
+	float: left;
+	width: 100%;
+	color: #2e7d32;
+	font-size: 15px;
+	margin-top: 10px;
+	cursor:pointer;
+	
+}
+
+
+
+.location:last-child .location-body{
+	margin-top: 66px;
+}

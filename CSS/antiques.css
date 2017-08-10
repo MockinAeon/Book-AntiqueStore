@@ -1,0 +1,236 @@
+.sort-part{
+}
+.sort-part h3{
+	float: left;
+	color:  #2e7d32;
+}
+.sort-part .sort{
+}
+.sort span{
+	float: right;
+	margin: 22px 20px;
+}
+.sort form{
+	margin: 15px;
+	float: right;
+}
+.show-antiques>div{
+	text-align: center;
+	padding: 10px;
+}
+
+.show-antiques>div:hover {
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.show-antiques-img{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+.show-antiques-img img{
+	width: 50%;
+	min-height: 140px;
+	max-height: 140px;
+}
+.show-antiques .antiques-name{
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	font-weight: 700;
+	min-height: 50px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+.show-antiques .antiques-price{
+	width: 100%;
+	text-align: center;
+	color: #7a7a7a;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+/*popup start*/
+.popup-part{
+	float: left;
+	padding: 30px;
+	background-color: #e8f5e9;
+	opacity: 1;
+}
+.popup-img{
+	width: 100%;
+}
+.popup-img img{
+	width: 100%;
+	min-height: 300px;
+	max-height: 300px;
+}
+.popup-smimg-part{
+	margin-top: 40px;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.popup-smimg{
+	margin-top: 20px;
+	padding: 2px;
+	width: 30%;
+	float: left;
+	margin-left: auto;
+}
+
+
+.popup-smimg img{
+	width: 100%;
+	min-height: 100px;
+	max-height: 150px;
+}
+.smimg2{
+	margin-top: 0px;
+	width: 40%;
+}
+.smimg2 img{
+	min-height: 130px;
+	max-height: 180px;
+}
+.popup-title{
+	width: 100%;
+}
+.popup-title span{
+	color: black;
+	font-size: 20px;
+	font-weight: 900
+}
+
+.popup-info{
+	margin-top: 20px;
+	float: left;
+	border-bottom: 1px solid gray;
+	padding-bottom: 50px;
+}
+.popup-isbn{
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+	font-size: 15px;
+	font-weight: 900;
+}
+.popup-price{
+	width: 100%;
+	float: left;
+	font-size: 15px;
+	color: #2e7d32;
+	font-weight: 900;
+	margin-top: 20px;
+}
+.popup-rate{
+	margin-top: 10px;
+	float: left;
+}
+.star-1{
+	color:  #2e7d32;
+}
+.star-2{
+	color:  black;
+}
+.popup-quantity{
+	margin-top: 20px;
+	float: left;
+}
+.popup-quantity input{
+	float: right;
+	width: 30%;
+}
+.popup-quantity span{
+	float: right;
+	width: 40%;
+	font-size: 15px;
+	font-weight: 900;	
+}
+.popup-add{
+	float: right;
+}
+.addbtn{
+	margin-top: 20px;
+	float: left;
+	background-color: black;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 2px solid white;
+	cursor: pointer;
+}
+.addbtn span{
+	color: white;
+	font-size: 15px;
+}
+
+.popup-description{
+	width: 100%;
+	float: left;
+	padding: 20px;
+	margin-top: 40px;
+}
+.descriptionbtn{
+	background-color: #65bb6a;
+	float: left;
+	padding: 5px 20px;
+	border-radius: 8px 8px 0 0 ;
+	border: 2px solid white;
+	cursor: pointer;
+}
+.description-btn-active{
+	background-color: white;
+	float: left;
+	padding: 5px 20px;
+	border-radius: 8px 8px 0 0 ; 
+	border: 2px solid white;
+	cursor: pointer;
+}
+
+.description-detail{
+	float: left;
+	background-color: white;
+	width: 100%;
+	padding: 20px;
+}
+.detail-title{
+	font-size: 15px;
+	font-weight: 900;
+	margin-left: 23px;
+	margin-bottom: 10px;
+	float: left;
+	width: 100%;
+	
+}
+.detail-body{
+	float:left;
+}
+.detail-text1{
+	font-weight: 900;
+}
+.description-review{
+	float: left;
+	background-color: white;
+	width: 100%;
+	padding: 20px;
+	display: none;
+}
+.review-title{
+	font-size: 15px;
+	font-weight: 900;
+	margin-left: 23px;
+	margin-bottom: 10px;
+	float: left;
+	width: 100%;
+}
+.review-body{
+	float:left;
+}
+
+
+/*popup end*/
+
